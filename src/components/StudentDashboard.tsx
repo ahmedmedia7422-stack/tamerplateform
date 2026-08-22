@@ -1444,7 +1444,7 @@ export default function StudentDashboard({ onLogout, currentTheme = 'khemiai_dar
         </div>
 
         {/* Optional APK Download Link for Web Browsers */}
-        {!isAndroidWebView() && (
+        {false && !isAndroidWebView() && (
           <div className="mt-6 text-center z-10 relative w-full px-4">
             <a
               href="https://github.com/U-WWW/el5emya2e-apk/releases/download/apk/default.apk"
