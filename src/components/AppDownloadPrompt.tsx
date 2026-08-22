@@ -52,7 +52,9 @@ export default function AppDownloadPrompt() {
   }, []);
 
   // DO NOT show anything if the user is using the Android WebView / App!
-  if (inWebView) {
+  // Temporarily hide the app download prompt
+  const isTemporarilyHidden = true;
+  if (isTemporarilyHidden || inWebView) {
     return null;
   }
 
