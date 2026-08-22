@@ -1,0 +1,97 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Students collection and subcollections
+    match /students/{studentId} {
+      allow read, write: if true;
+    }
+    match /students/{studentId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Quizzes collection and subcollections
+    match /quizzes/{quizId} {
+      allow read, write: if true;
+    }
+    match /quizzes/{quizId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Results collection and subcollections
+    match /results/{resultId} {
+      allow read, write: if true;
+    }
+    match /results/{resultId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Videos collection and subcollections
+    match /videos/{videoId} {
+      allow read, write: if true;
+    }
+    match /videos/{videoId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Messages collection and subcollections
+    match /messages/{messageId} {
+      allow read, write: if true;
+    }
+    match /messages/{messageId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Grade chats collection
+    match /grade_chats/{chatId} {
+      allow read, write: if true;
+    }
+    match /grade_chats/{chatId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Settings collection (hero, teacher banner, etc.)
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+    match /settings/{settingId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Center groups
+    match /center_groups/{groupId} {
+      allow read, write: if true;
+    }
+    match /center_groups/{groupId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Center records
+    match /center_records/{recordId} {
+      allow read, write: if true;
+    }
+    match /center_records/{recordId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Center evaluations
+    match /center_evaluations/{evalId} {
+      allow read, write: if true;
+    }
+    match /center_evaluations/{evalId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Arabic evaluations
+    match /arabic_evaluations/{evalId} {
+      allow read, write: if true;
+    }
+    match /arabic_evaluations/{evalId}/{allPaths=**} {
+      allow read, write: if true;
+    }
+
+    // Catch-all for any other collections
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
